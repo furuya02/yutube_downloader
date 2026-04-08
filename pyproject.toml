@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yutube-downloader"
+version = "0.1.0"
+description = "YouTube video downloader CLI tool - Download YouTube videos as MP4"
+readme = "README.md"
+authors = [
+    { name = "furuya02" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Utilities",
+]
+keywords = ["youtube", "download", "mp4", "video", "cli"]
+
+dependencies = [
+    "yt-dlp>=2024.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/furuya02/yutube_downloader"
+Repository = "https://github.com/furuya02/yutube_downloader"
+Issues = "https://github.com/furuya02/yutube_downloader/issues"
+
+[project.scripts]
+yutube_downloader = "yutube_downloader.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
